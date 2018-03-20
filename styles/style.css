@@ -7,6 +7,7 @@
   z-index: -1;
 } */
 
+
 /* .left,
 .right {
   position: absolute;
@@ -44,8 +45,8 @@ body {
 
 .container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -71,18 +72,59 @@ body {
   background-color: #ECF0F1;
 }
 
-.navigation {
-  position: fixed;
-  bottom: 75px;
-  left: 0;
+.mainHeader {
   display: flex;
+  width: 100%;
   flex-direction: row;
-  width: 50%;
-  align-self: auto;
+  justify-content: space-around;
+  margin-top: 35px;
+}
+
+.mainFooter {
+  display: flex;
+  width: 100%;
+  margin-bottom: 70px;
+  flex-direction: row;
   justify-content: space-around;
 }
 
-.navigation ul {
+.logo a {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 36px;
+  color: #ECF0F1;
+  text-decoration: none;
+}
+
+.text {
+  font-family: Merriweather Sans;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  font-size: 12px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: #34495E;
+}
+
+.promo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 80px;
+  font-size: 72px;
+  text-align: center;
+  letter-spacing: 1.7px;
+  color: #FFFFFF;
+}
+
+.navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -105,6 +147,41 @@ body {
   text-decoration: none;
 }
 
-.navigation a:hover {
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 117px;
+  margin: 0;
+  padding: 0;
+}
+.social a {
+  display: block;
+  width: 26px;
+  height: 26px;
+  text-decoration: none;
+}
+
+/* .tw {
+  background: url("../img/tw.svg") no-repeat 50% 50%;
+}
+.in {
+  background: url("../img/in.svg") no-repeat 50% 50%;
+}
+.fb {
+  background: url("../img/fb.svg") no-repeat 50% 50%;
+} */
+
+svg:hover,
+a:hover {
   color: rgb(55, 179, 121);
+  fill: rgb(55, 179, 121);
+  border-color: rgb(55, 179, 121);
+}
+
+button {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
