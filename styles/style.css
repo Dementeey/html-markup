@@ -98,7 +98,7 @@ body {
   text-decoration: none;
 }
 
-.text {
+.textLink a {
   font-family: Merriweather Sans;
   font-style: normal;
   font-weight: 800;
@@ -106,6 +106,7 @@ body {
   font-size: 12px;
   letter-spacing: 0.7px;
   text-transform: uppercase;
+  text-decoration: none;
   color: #34495E;
 }
 
@@ -155,12 +156,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .social a {
   display: block;
   width: 26px;
   height: 26px;
   text-decoration: none;
 }
+
 
 /* .tw {
   background: url("../img/tw.svg") no-repeat 50% 50%;
@@ -172,7 +175,7 @@ body {
   background: url("../img/fb.svg") no-repeat 50% 50%;
 } */
 
-svg:hover,
+svg:hover use,
 a:hover {
   color: rgb(55, 179, 121);
   fill: rgb(55, 179, 121);
