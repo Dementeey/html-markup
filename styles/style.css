@@ -96,6 +96,13 @@ body {
   background-color: #34495E;
 }
 
+@supports (background-blend-mode: screen) {
+  .container#About::after {
+    background: #34495E url('../img/BigCircles.svg') no-repeat 100% 50%;
+    background-blend-mode: screen;
+  }
+}
+
 
 /* ----------- Product --------------- */
 
@@ -243,6 +250,28 @@ body {
   color: #34495E;
 }
 
+.activeSceen {
+  position: relative;
+  pointer-events: none;
+}
+
+.activeSceen::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  border-radius: 3px;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #34495E;
+}
+
+#Product .activeSceen::before {
+  background-color: #ECF0F1;
+}
+
 
 /* NAV */
 
@@ -282,6 +311,7 @@ body {
 /* index content */
 
 .promo {
+  margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -309,39 +339,95 @@ body {
 /* index content */
 
 
-/* decor */
+/* about content */
 
-.activeSceen {
-  position: relative;
-  pointer-events: none;
+main {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 10%;
+  padding-left: 10%;
 }
 
-.activeSceen::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  border-radius: 3px;
+.firstBlockContent,
+.secondBlockContent {
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.firstBlockContent .inWrapp {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  min-height: 390px;
+  background: url('../img/SmallCircles.svg') no-repeat 50% 50%;
+}
+
+.firstBlockContent .quotes {
+  box-sizing: border-box;
   display: block;
-  width: 40px;
-  height: 3px;
-  background-color: #34495E;
+  width: 50px;
+  height: 40px;
+  background: url('../img/quotes.svg') no-repeat 50% 50%;
 }
 
+.firstBlockContent .text {
+  font-family: Merriweather Sans;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 25px;
+  font-size: 18px;
+  letter-spacing: 1.37143px;
+  color: #34495E;
+  margin-top: 20%;
+}
+
+.secondBlockContent {
+  margin-left: 10%;
+}
+
+.secondBlockContent .inWrapp {
+  box-sizing: border-box;
+  width: 420px;
+  min-height: 390px;
+}
+
+.secondBlockContent .text {
+  font-family: Merriweather Sans;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 21px;
+  font-size: 15px;
+  letter-spacing: 1.28571px;
+  color: #ECF0F1;
+}
+
+
+/* about content */
+
+
+/* product content */
+
+.blockContent {
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+
+
+}
+
+/* product content */
+
+/* decor */
 svg:hover use,
 a:hover {
   color: rgb(55, 179, 121) !important;
   fill: rgb(55, 179, 121) !important;
   border-color: rgb(55, 179, 121) !important;
 }
-
-button {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 
 /* decor */
