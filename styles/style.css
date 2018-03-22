@@ -43,7 +43,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+
+/* BACKGROUND */
+
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -64,29 +68,89 @@ body {
 
 .container::before {
   left: 0;
-  background-color: #34495E;
 }
 
 .container::after {
   right: 0;
+}
+
+
+/* ----------- Index --------------- */
+
+.container#Index::before {
+  background-color: #34495E;
+}
+
+.container#Index::after {
   background-color: #ECF0F1;
 }
 
-.mainHeader {
+
+/* ----------- About --------------- */
+
+.container#About::before {
+  background-color: #ECF0F1;
+}
+
+.container#About::after {
+  background-color: #34495E;
+}
+
+
+/* ----------- Product --------------- */
+
+.container#Product::before {
+  background-color: #34495E;
+}
+
+.container#Product::after {
+  background-color: #ECF0F1;
+}
+
+
+/* ----------- Contact --------------- */
+
+.container#Contact::before {
+  background-color: #ECF0F1;
+}
+
+.container#Contact::after {
+  background-color: #34495E;
+}
+
+
+/* --------------------------------- */
+
+
+/* BACKGROUND */
+
+
+/* MAIN HEADER & FOOTER */
+
+.mainHeader,
+.mainFooter {
+  box-sizing: border-box;
   display: flex;
   width: 100%;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+.mainHeader {
   margin-top: 35px;
 }
 
 .mainFooter {
-  display: flex;
-  width: 100%;
   margin-bottom: 70px;
-  flex-direction: row;
-  justify-content: space-around;
 }
+
+
+/* MAIN HEADER & FOOTER */
+
+
+/* LOGO */
 
 .logo a {
   font-family: Roboto;
@@ -94,8 +158,28 @@ body {
   font-weight: normal;
   line-height: normal;
   font-size: 36px;
-  color: #ECF0F1;
   text-decoration: none;
+}
+
+#Index .logo a,
+#Product .logo a {
+  color: #ECF0F1;
+}
+
+#About .logo a,
+#Contact .logo a {
+  color: #34495E;
+}
+
+
+/* LOGO */
+
+
+/* TEXT LINK */
+
+.textLink {
+  min-width: 135px;
+  text-align: right;
 }
 
 .textLink a {
@@ -110,25 +194,26 @@ body {
   color: #34495E;
 }
 
-.promo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 80px;
-  font-size: 72px;
-  text-align: center;
-  letter-spacing: 1.7px;
-  color: #FFFFFF;
+#Index .textLink a,
+#Product .textLink a {
+  color: #34495E;
 }
+
+#About .textLink a,
+#Contact .textLink a {
+  color: #ECF0F1;
+}
+
+
+/* TEXT LINK */
+
+
+/* NAV */
 
 .navigation {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 292px;
   margin: 0;
   padding: 0;
@@ -148,6 +233,22 @@ body {
   text-decoration: none;
 }
 
+#Index .navigation a,
+#Product .navigation a {
+  color: #ECF0F1;
+}
+
+#About .navigation a,
+#Contact .navigation a {
+  color: #34495E;
+}
+
+
+/* NAV */
+
+
+/* SOCIAL */
+
 .social {
   display: flex;
   flex-direction: row;
@@ -164,22 +265,75 @@ body {
   text-decoration: none;
 }
 
+#Index .social a svg use,
+#Product .social a svg use {
+  fill: #34495E;
+}
 
-/* .tw {
-  background: url("../img/tw.svg") no-repeat 50% 50%;
+#About .social a svg use,
+#Contact .social a svg use {
+  fill: #ECF0F1;
 }
-.in {
-  background: url("../img/in.svg") no-repeat 50% 50%;
+
+
+/* SOCIAL */
+
+
+/* index content */
+
+.promo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 650px;
+  transform: translate(-50%, -50%);
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 80px;
+  font-size: 72px;
+  text-align: center;
+  letter-spacing: 1.7px;
+  color: #000000;
 }
-.fb {
-  background: url("../img/fb.svg") no-repeat 50% 50%;
-} */
+
+@supports ( -webkit-text-fill-color: transparent) {
+  .promo {
+    background: linear-gradient( to left, #34495E 50%, #FFFFFF 50%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+}
+
+
+/* index content */
+
+
+/* decor */
+
+.activeSceen {
+  position: relative;
+  pointer-events: none;
+}
+
+.activeSceen::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  border-radius: 3px;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #34495E;
+}
 
 svg:hover use,
 a:hover {
-  color: rgb(55, 179, 121);
-  fill: rgb(55, 179, 121);
-  border-color: rgb(55, 179, 121);
+  color: rgb(55, 179, 121) !important;
+  fill: rgb(55, 179, 121) !important;
+  border-color: rgb(55, 179, 121) !important;
 }
 
 button {
@@ -188,3 +342,6 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+/* decor */
