@@ -40,7 +40,7 @@ body {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -63,7 +63,7 @@ body {
   width: 50%;
   height: 100vh;
   top: 0;
-  z-index: -1;
+  z-index: -5;
 }
 
 .container::before {
@@ -135,14 +135,15 @@ body {
 /* MAIN HEADER & FOOTER */
 
 .mainHeader,
-.mainFooter {
+.mainFooter,
+.mainContent {
   box-sizing: border-box;
   display: flex;
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  padding-right: 10%;
-  padding-left: 10%;
+  padding-right: 15%;
+  padding-left: 15%;
 }
 
 .mainHeader {
@@ -153,6 +154,10 @@ body {
   margin-bottom: 70px;
 }
 
+.mainContent {
+  align-items: center;
+}
+
 
 /* MAIN HEADER & FOOTER */
 
@@ -160,7 +165,7 @@ body {
 /* LOGO */
 
 .logo a {
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
   line-height: normal;
@@ -190,9 +195,9 @@ body {
 }
 
 .textLink a {
-  font-family: Merriweather Sans;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-weight: 800;
+  font-weight: bold;
   line-height: normal;
   font-size: 12px;
   letter-spacing: 0.7px;
@@ -317,7 +322,7 @@ body {
   left: 50%;
   min-width: 650px;
   transform: translate(-50%, -50%);
-  font-family: Open Sans;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: bold;
   line-height: 80px;
@@ -340,17 +345,6 @@ body {
 
 
 /* about content */
-
-main {
-  box-sizing: border-box;
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 10%;
-  padding-left: 10%;
-}
 
 .firstBlockContent,
 .secondBlockContent {
@@ -376,7 +370,7 @@ main {
 }
 
 .firstBlockContent .text {
-  font-family: Merriweather Sans;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: bold;
   line-height: 25px;
@@ -399,7 +393,7 @@ main {
 }
 
 .secondBlockContent .text {
-  font-family: Merriweather Sans;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
   line-height: 21px;
@@ -415,22 +409,107 @@ main {
 /* product content */
 
 .blockContent {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
   position: relative;
   width: 100%;
 }
 
-
+.blockContent h2 {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 64px;
+  letter-spacing: 2.88px;
+  color: #FFFFFF;
 }
+
+.blockContent p {
+  position: absolute;
+  top: 30%;
+  margin: 0;
+  margin-top: 50px;
+  left: 0;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 23px;
+  font-size: 16px;
+  letter-spacing: 0.72px;
+  color: #ECF0F1;
+  width: 200px;
+}
+
+.blockContent span {
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  font-size: 17px;
+  letter-spacing: 0.765px;
+  text-transform: uppercase;
+  color: #ECF0F1;
+  padding-left: 40px;
+}
+
+.blockContent span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 2px;
+  background-color: #ecf0f1;
+}
+
+.blockContent img {
+  width: 900px;
+  height: 515px;
+}
+
+@media screen and (max-width: 1600px) {
+  .blockContent img {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+.blockContent button {
+  position: absolute;
+  left: -10%;
+  bottom: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  margin: 0;
+  width: 35px;
+  height: 20px;
+  background: none;
+  border: none;
+  background: url('../img/arrowIcon.svg') no-repeat 50% 50%;
+  cursor: pointer;
+}
+
 
 /* product content */
 
+
 /* decor */
+
 svg:hover use,
 a:hover {
   color: rgb(55, 179, 121) !important;
   fill: rgb(55, 179, 121) !important;
   border-color: rgb(55, 179, 121) !important;
 }
+
 
 /* decor */
