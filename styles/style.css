@@ -132,7 +132,7 @@ body {
 /* BACKGROUND */
 
 
-/* MAIN HEADER & FOOTER */
+/* MAIN BOX MODEL */
 
 .mainHeader,
 .mainFooter,
@@ -158,8 +158,14 @@ body {
   align-items: center;
 }
 
+.firstBlockContent,
+.secondBlockContent {
+  box-sizing: border-box;
+  width: 50%;
+}
 
-/* MAIN HEADER & FOOTER */
+
+/* MAIN BOX MODEL */
 
 
 /* LOGO */
@@ -346,12 +352,6 @@ body {
 
 /* about content */
 
-.firstBlockContent,
-.secondBlockContent {
-  box-sizing: border-box;
-  width: 50%;
-}
-
 .firstBlockContent .inWrapp {
   box-sizing: border-box;
   display: flex;
@@ -500,6 +500,76 @@ body {
 
 
 /* product content */
+
+
+/* contact content */
+
+.mainForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 80%;
+}
+
+.mainForm input,
+.mainForm textarea,
+.mainForm button {
+  box-sizing: border-box;
+  width: 80%;
+  padding: 17px 25px;
+  margin-bottom: 35px;
+  border-radius: 27px;
+  border: none;
+  outline: none;
+  background-color: #34495E;
+  color: #ECF0F1;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 14px;
+}
+
+.mainForm input {
+  height: 55px;
+}
+
+.mainForm textarea {
+  height: 20vh;
+  resize: none;
+}
+
+.mainForm button {
+  background-color: #ECF0F1;
+  border: 2px solid #34495E;
+  color: #34495E;
+  height: 55px;
+  vertical-align: top;
+  margin: 0;
+}
+
+.imgInBtn {}
+
+.mainForm input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.mainForm input::-webkit-outer-spin-button,
+.mainForm input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#maps {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  background-color:rebeccapurple;
+}
+
+
+/* contact content */
 
 
 /* decor */
