@@ -113,10 +113,12 @@ body {
 
 .mainHeader {
   margin-top: 35px;
+  z-index: 10;
 }
 
 .mainFooter {
   margin-bottom: 70px;
+  z-index: 10;
 }
 
 .mainContent {
@@ -570,7 +572,6 @@ body {
   .mainForm input,
   .mainForm textarea,
   .mainForm button {
-    width: 70%;
     padding: 15px 23px;
     margin-bottom: 25px;
   }
@@ -590,7 +591,6 @@ body {
   .mainForm input,
   .mainForm textarea,
   .mainForm button {
-    width: 65%;
     padding: 13px 20px;
     margin-bottom: 20px;
   }
@@ -613,7 +613,11 @@ body {
   top: 0;
   right: 0;
   z-index: 0;
-  background-color: #232323;
+}
+
+
+.container#Contact::after {
+  background-color: transparent;
 }
 
 
