@@ -488,6 +488,7 @@ body {
   outline: none;
   background-color: #34495E;
   color: #ECF0F1;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: bold;
   line-height: normal;
@@ -498,21 +499,63 @@ body {
   height: 55px;
 }
 
+.mainForm input::-webkit-input-placeholder,
+.mainForm textarea::-webkit-input-placeholder {
+  color: #ECF0F1;
+}
+
+.mainForm input::-moz-placeholder,
+.mainForm textarea::-moz-placeholder {
+  color: #ECF0F1;
+}
+
+.mainForm input:-moz-placeholder,
+.mainForm textarea:-moz-placeholder {
+  color: #ECF0F1;
+}
+
+.mainForm input:-ms-input-placeholder,
+.mainForm textarea:-ms-input-placeholder {
+  color: #ECF0F1;
+}
+
+.mainForm input:focus::-webkit-input-placeholder,
+.mainForm textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.mainForm input:focus::-moz-placeholder,
+.mainForm textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.mainForm input:focus:-moz-placeholder,
+.mainForm textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+
+.mainForm input:focus:-ms-input-placeholder,
+.mainForm textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
 .mainForm textarea {
   height: 20vh;
   resize: none;
 }
 
 .mainForm button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
   background-color: #ECF0F1;
   border: 2px solid #34495E;
   color: #34495E;
   height: 55px;
-  vertical-align: top;
   margin: 0;
+  padding: 10px 50px;
 }
-
-.imgInBtn {}
 
 .mainForm input[type='number'] {
   -moz-appearance: textfield;
@@ -523,7 +566,7 @@ body {
   -webkit-appearance: none;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1599px) {
   .mainForm input,
   .mainForm textarea,
   .mainForm button {
@@ -539,6 +582,27 @@ body {
   }
   .mainForm button {
     height: 45px;
+    padding: 10px 50px;
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  .mainForm input,
+  .mainForm textarea,
+  .mainForm button {
+    width: 65%;
+    padding: 13px 20px;
+    margin-bottom: 20px;
+  }
+  .mainForm input {
+    height: 40px;
+  }
+  .mainForm textarea {
+    height: 13vh;
+  }
+  .mainForm button {
+    height: 40px;
+    padding: 10px 50px;
   }
 }
 
@@ -549,7 +613,7 @@ body {
   top: 0;
   right: 0;
   z-index: 0;
-  background-color: rebeccapurple;
+  background-color: #232323;
 }
 
 
@@ -563,6 +627,15 @@ a:hover {
   color: rgb(55, 179, 121) !important;
   fill: rgb(55, 179, 121) !important;
   border-color: rgb(55, 179, 121) !important;
+}
+
+.mainForm button:hover {
+  color: rgb(55, 179, 121) !important;
+  border-color: rgb(55, 179, 121) !important;
+}
+
+.mainForm button:hover .imgInBtn use {
+  fill: rgb(55, 179, 121) !important;
 }
 
 
