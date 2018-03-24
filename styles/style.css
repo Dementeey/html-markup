@@ -1,38 +1,3 @@
-/* .container {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: -1;
-} */
-
-
-/* .left,
-.right {
-  position: absolute;
-  width: 50%;
-  height: 100vh;
-  top: 0;
-  z-index: -1;
-}
-
-.left {
-  left: 0;
-}
-
-.right {
-  right: 0;
-}
-
-.bgc1 {
-  background-color: #34495E;
-}
-
-.bgc2 {
-  background-color: #ECF0F1;
-} */
-
 html,
 body {
   margin: 0;
@@ -558,6 +523,25 @@ body {
   -webkit-appearance: none;
 }
 
+@media screen and (max-width: 1600px) {
+  .mainForm input,
+  .mainForm textarea,
+  .mainForm button {
+    width: 70%;
+    padding: 15px 23px;
+    margin-bottom: 25px;
+  }
+  .mainForm input {
+    height: 45px;
+  }
+  .mainForm textarea {
+    height: 15vh;
+  }
+  .mainForm button {
+    height: 45px;
+  }
+}
+
 #maps {
   height: 100%;
   width: 50%;
@@ -565,7 +549,7 @@ body {
   top: 0;
   right: 0;
   z-index: 0;
-  background-color:rebeccapurple;
+  background-color: rebeccapurple;
 }
 
 
