@@ -1,55 +1,34 @@
 <template>
   <div id="app">
-    <h1>{{ msg }}</h1>
+    <MainComponent></MainComponent>
+    <AboutComponent></AboutComponent>
+    <ProductComponent></ProductComponent>
+    <ContactComponent></ContactComponent>
   </div>
 </template>
 
 <script>
+import MainComponent from './components/MainComponent.vue'
+import AboutComponent from './components/AboutComponent.vue'
+import ProductComponent from './components/ProductComponent.vue'
+import ContactComponent from './components/ContactComponent.vue'
+
 export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+  components: {
+    MainComponent,
+    AboutComponent,
+    ProductComponent,
+    ContactComponent
+  },
+  name: 'app'
 }
 </script>
 
 <style lang="less">
-@import "./assets/styles/var/var.less";
+@import "./assets/styles/var.less";
 html,
 body {
   margin: 0;
   padding: 0;
-}
-#app {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-
-  h1 {
-    color: @hoverColor;
-  }
-}
-#app::before,
-#app::after {
-  content: '';
-  position: absolute;
-  width: 50%;
-  height: 100vh;
-  top: 0;
-  z-index: -5;
-}
-#app::before {
-  left: 0;
-  background-color: @mainBlue;
-}
-#app::after {
-  right: 0;
-  background-color: @mainWhite;
 }
 </style>

@@ -1,0 +1,66 @@
+/* BACKGROUND */
+
+.background(@firstColor, @secondColor) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    top: 0;
+    z-index: -5;
+  }
+  &::before {
+    left: 0;
+    background-color: @firstColor;
+  }
+  &::after {
+    right: 0;
+    background-color: @secondColor;
+  }
+}
+
+
+/* MAIN BOX MODEL */
+
+.mainBoxModel() {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 15%;
+  padding-left: 15%;
+  z-index: 10;
+}
+
+footer {
+  margin-bottom: 70px;
+}
+
+.mainContent {
+  align-items: center;
+}
+
+.firstBlockContent,
+.secondBlockContent {
+  box-sizing: border-box;
+  width: 50%;
+}
+
+
+/* LINK STYLE */
+
+.linksColor(@color, @colorHover) {
+  color: @color;
+  &:hover {
+    color: @colorHover;
+  }
+}
