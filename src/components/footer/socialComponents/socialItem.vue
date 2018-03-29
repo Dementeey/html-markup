@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'socialComponent',
+  name: 'socialItem',
   data () {
     return {
       text: 'Oregano',
@@ -15,5 +15,5 @@ export default {
 </script>
 
 <style lang="less">
-
+@import "../../../assets/styles/var.less";
 </style>
