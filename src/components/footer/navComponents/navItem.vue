@@ -1,6 +1,6 @@
 <template>
     <li>
-      <a class="navLink" v-bind:href="url">{{ text }}</a>
+      <a :class="[mainClass, {activeScreen: isActive}]" :href="url">{{ text }}</a>
     </li>
 </template>
 
@@ -10,7 +10,9 @@ export default {
   data () {
     return {
       text: 'About',
-      url: '#About'
+      url: '#About',
+      mainClass: 'navLink',
+      isActive: true
     }
   }
 }
@@ -34,4 +36,25 @@ export default {
 
 .linksColor(@mainWhite, @hoverColor);
 }
+.activeScreen {
+  position: relative;
+  pointer-events: none;
+}
+
+.activeScreen::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  border-radius: 3px;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #34495E;
+}
+
+// .activeScreen::before {
+//   background-color: #ECF0F1;
+// }
 </style>
