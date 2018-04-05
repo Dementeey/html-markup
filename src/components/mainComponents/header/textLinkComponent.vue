@@ -15,11 +15,11 @@ export default {
 </script>
 
 <style lang="less">
-@import "../../assets/styles/var.less";
-@import "../../assets/styles/mixin.less";
+@import "../../../assets/styles/var.less";
+@import "../../../assets/styles/mixin.less";
 
 .textLink {
-  .linksColor(@mainBlue, @hoverColor);
+  .colorLiknAndColorLinkHover(@mainColor, @hoverColor);
   font-family: @mainFamily;
   font-style: normal;
   font-weight: bold;
@@ -28,6 +28,5 @@ export default {
   letter-spacing: 0.7px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #34495E;
 }
 </style>

@@ -1,31 +1,30 @@
 <template>
   <div id="app">
-    <MainComponent></MainComponent>
-    <AboutComponent></AboutComponent>
-    <ProductComponent></ProductComponent>
-    <ContactComponent></ContactComponent>
+    <Main></Main>
+    <About></About>
+    <Product></Product>
+    <Contact></Contact>
   </div>
 </template>
 
 <script>
-import MainComponent from './components/MainComponent.vue'
-import AboutComponent from './components/AboutComponent.vue'
-import ProductComponent from './components/ProductComponent.vue'
-import ContactComponent from './components/ContactComponent.vue'
+import Main from './components/mainScreens/main/Main.vue'
+import About from './components/mainScreens/about/About.vue'
+import Product from './components/mainScreens/product/Product.vue'
+import Contact from './components/mainScreens/contact/Contact.vue'
 
 export default {
   components: {
-    MainComponent,
-    AboutComponent,
-    ProductComponent,
-    ContactComponent
+    Main,
+    About,
+    Product,
+    Contact
   },
   name: 'app'
 }
 </script>
 
 <style lang="less">
-@import "./assets/styles/var.less";
 html,
 body {
   margin: 0;

@@ -7,15 +7,15 @@
 </template>
 
 <script>
-import headerComponent from './header/headerComponent.vue'
-import footerComponent from './footer/footerComponent.vue'
+import headerComponent from '../../mainComponents/header/Header.vue'
+import footerComponent from '../../mainComponents/footer/Footer.vue'
 
 export default {
   components: {
     headerComponent,
     footerComponent
   },
-  name: 'MainComponent',
+  name: 'Main',
   data () {
     return {
       msg: 'Immediately regret falling into bathtub'
@@ -25,11 +25,11 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "../assets/styles/var.less";
-@import "../assets/styles/mixin.less";
+@import "../../../assets/styles/var.less";
+@import "../../../assets/styles/mixin.less";
 
 .container {
-  .background(@mainBlue, @mainWhite);
+  .background(@mainColor, @secondColor);
 }
 .promo {
   margin: 0;
@@ -44,14 +44,14 @@ export default {
   line-height: 80px;
   font-size: 72px;
   text-align: center;
-  letter-spacing: 1.7px;
+  letter-spacing: 3.5px;
   /* default color */
   color: #000000;
 }
 
 @supports ( -webkit-text-fill-color: transparent) {
   .promo {
-    background: linear-gradient( to left, @mainBlue 50%, @mainWhite 50%);
+    background: linear-gradient( to left, @mainColor 50%, @secondColor 50%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
   }

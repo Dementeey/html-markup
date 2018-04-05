@@ -19,8 +19,8 @@ export default {
 </script>
 
 <style lang="less">
-@import "../../../assets/styles/var.less";
-@import "../../../assets/styles/mixin.less";
+@import "../../../../assets/styles/var.less";
+@import "../../../../assets/styles/mixin.less";
 
 .navLink {
   font-family: @mainFamily;
@@ -34,7 +34,7 @@ export default {
   text-transform: uppercase;
   text-decoration: none;
 
-.linksColor(@mainWhite, @hoverColor);
+.colorLiknAndColorLinkHover(@secondColor, @hoverColor);
 }
 .activeScreen {
   position: relative;
@@ -51,10 +51,7 @@ export default {
   display: block;
   width: 40px;
   height: 3px;
-  background-color: #34495E;
+  background-color: @mainColor;
 }
 
-// .activeScreen::before {
-//   background-color: #ECF0F1;
-// }
 </style>

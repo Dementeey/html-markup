@@ -24,8 +24,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "../../assets/styles/var.less";
-@import "../../assets/styles/mixin.less";
+@import "../../../assets/styles/var.less";
+@import "../../../assets/styles/mixin.less";
 
 .wrapper{
   .mainBoxModel();

@@ -6,15 +6,15 @@
 </template>
 
 <script>
-import headerComponent from './header/headerComponent.vue'
-import footerComponent from './footer/footerComponent.vue'
+import headerComponent from '../../mainComponents/header/Header.vue'
+import footerComponent from '../../mainComponents/footer/Footer.vue'
 
 export default {
   components: {
     headerComponent,
     footerComponent
   },
-  name: 'ProductComponet',
+  name: 'Product',
   data () {
     return {
       msg: ''
@@ -25,10 +25,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "../assets/styles/var.less";
-@import "../assets/styles/mixin.less";
+@import "../../../assets/styles/var.less";
+@import "../../../assets/styles/mixin.less";
 
 .container {
-  .background(@mainBlue, @mainWhite);
-}
+  .background(@mainColor, @secondColor);}
 </style>

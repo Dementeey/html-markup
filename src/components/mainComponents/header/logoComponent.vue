@@ -15,8 +15,8 @@ export default {
 </script>
 
 <style lang="less">
-@import "../../assets/styles/var.less";
-@import "../../assets/styles/mixin.less";
+@import "../../../assets/styles/var.less";
+@import "../../../assets/styles/mixin.less";
 .logo {
   font-family: @mainFamily;
   font-style: normal;
@@ -27,10 +27,10 @@ export default {
 
 }
 .firstColor {
-  .linksColor(@mainBlue, @hoverColor);
+  .colorLiknAndColorLinkHover(@mainColor, @hoverColor);
 }
 
 .secondColor {
-  .linksColor(@mainWhite, @hoverColor);
+  .colorLiknAndColorLinkHover(@secondColor, @hoverColor);
 }
 </style>
