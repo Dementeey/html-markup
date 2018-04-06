@@ -1,10 +1,13 @@
 # Oregano Vue app
 
-> Верстка
+> The my first project with vue.js
 
 ## Build Setup
 
-``` bash
+```
+# node 8.11.1
+# npm 5.6.0
+
 # install dependencies
 npm install
 
@@ -13,6 +16,5 @@ npm run dev
 
 # build for production with minification
 npm run build
-```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+```

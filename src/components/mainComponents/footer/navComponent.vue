@@ -4,16 +4,16 @@
     <navItem></navItem>
     <navItem></navItem>
     <navItem></navItem>
+
+    <li v-for="item in items">
+      {{ item.message }}
+    </li>
   </ul>
 </template>
 
 <script>
-import navItem from './navComponents/navItem.vue'
 
 export default {
-  components: {
-    navItem
-  },
   name: 'navComponent',
   data () {
     return {
