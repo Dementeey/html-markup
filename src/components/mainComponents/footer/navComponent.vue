@@ -1,12 +1,16 @@
 <template>
   <ul class="navigation">
-    <navItem></navItem>
-    <navItem></navItem>
-    <navItem></navItem>
-    <navItem></navItem>
-
-    <li v-for="item in items">
-      {{ item.message }}
+    <li
+        v-for="item in items"
+        :key="item.id"
+    >
+      <a
+        :href="item.url"
+        :title="item.title"
+        :class="[mainClass, {activeScreen: item.isActive}]"
+      >
+        {{ item.message }}
+      </a>
     </li>
   </ul>
 </template>
@@ -17,14 +21,33 @@ export default {
   name: 'navComponent',
   data () {
     return {
-      text: 'Oregano',
-      isTruth: false
+      mainClass: 'navLink',
+      items: [
+        { message: 'About',
+          title: 'About',
+          url: '#About',
+          isActive: true
+        },
+        { message: 'Product',
+          title: 'Product',
+          url: '#Product',
+          isActive: false
+        },
+        { message: 'Contact',
+          title: 'Contact',
+          url: '#Contact',
+          isActive: false
+        }
+      ]
     }
   }
 }
 </script>
 
 <style lang="less" scoped>
+@import "../../../assets/styles/var.less";
+@import "../../../assets/styles/mixin.less";
+
 .navigation {
   display: flex;
   flex-direction: row;
@@ -33,5 +56,38 @@ export default {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.navLink {
+  font-family: @mainFamily;
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+.colorLiknAndColorLinkHover(@secondColor, @hoverColor);
+}
+
+.activeScreen {
+  position: relative;
+  pointer-events: none;
+}
+
+.activeScreen::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  border-radius: 3px;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: @secondColor;
 }
 </style>
