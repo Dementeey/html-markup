@@ -1,8 +1,26 @@
 <template>
   <div class="social">
-    <socialItem></socialItem>
-    <socialItem></socialItem>
-    <socialItem></socialItem>
+    <a
+      class="socialItem"
+      title="titleMessage"
+      v-bind:href="#"
+      target="_blink"
+    >
+    </a>
+    <a
+      class="socialItem"
+      v-bind:title="titleMessage"
+      v-bind:href="url"
+      target="_blink"
+    >
+    </a>
+    <a
+      class="socialItem"
+      v-bind:title="titleMessage"
+      v-bind:href="url"
+      target="_blink"
+    >
+    </a>
   </div>
 </template>
 
@@ -16,7 +34,8 @@ export default {
   name: 'socialComponent',
   data () {
     return {
-      text: ''
+      url: '#',
+      titleMessage: 'Tw'
     }
   }
 }
@@ -27,7 +46,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 117px;
+  min-width: 117px;
   margin: 0;
   padding: 0;
 }

@@ -26,7 +26,7 @@ export default {
         { message: 'About',
           title: 'About',
           url: '#About',
-          isActive: true
+          isActive: false
         },
         { message: 'Product',
           title: 'Product',
@@ -40,6 +40,22 @@ export default {
         }
       ]
     }
+  },
+  computed: {
+  //   getCoords: function () {
+  //     var box = this.getBoundingClientRect();
+
+  //     return {
+  //       top: box.top + pageYOffset,
+  //       left: box.left + pageXOffset
+  //     };
+  //   },
+
+  //   function () {
+  //     // `this` указывает на экземпляр
+  //     // return this.items[0].isActive = true
+  //     alert( "Браузер находится на " + window.screenX + "," + window.screenY );
+  //   }
   }
 }
 </script>
@@ -70,7 +86,12 @@ export default {
   text-transform: uppercase;
   text-decoration: none;
 
-.colorLiknAndColorLinkHover(@secondColor, @hoverColor);
+  .colorLiknAndColorLinkHover(@secondColor, @hoverColor);
+}
+
+#About .navLink,
+#Contact .navLink {
+  .colorLiknAndColorLinkHover(@mainColor, @hoverColor);
 }
 
 .activeScreen {
@@ -89,5 +110,10 @@ export default {
   width: 40px;
   height: 3px;
   background-color: @secondColor;
+}
+
+#About .activeScreen::before,
+#Contact .activeScreen::before {
+  background-color: @mainColor;
 }
 </style>

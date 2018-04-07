@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div id="Main" class="container">
     <headerComponent></headerComponent>
     <h1 class="promo">{{ msg }}</h1>
     <footerComponent></footerComponent>

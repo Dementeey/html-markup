@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div id="About" class="container">
     <headerComponent></headerComponent>
     <footerComponent></footerComponent>
   </div>

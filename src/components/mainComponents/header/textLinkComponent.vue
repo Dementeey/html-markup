@@ -19,7 +19,6 @@ export default {
 @import "../../../assets/styles/mixin.less";
 
 .textLink {
-  .colorLiknAndColorLinkHover(@mainColor, @hoverColor);
   font-family: @mainFamily;
   font-style: normal;
   font-weight: bold;
@@ -28,5 +27,12 @@ export default {
   letter-spacing: 0.7px;
   text-transform: uppercase;
   text-decoration: none;
+
+  .colorLiknAndColorLinkHover(@mainColor, @hoverColor);
 }
+#About .textLink,
+#Contact .textLink {
+  .colorLiknAndColorLinkHover(@secondColor, @hoverColor);
+}
+
 </style>

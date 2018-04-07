@@ -8,7 +8,7 @@ export default {
   data () {
     return {
       text: 'Oregano',
-      isTruth: false
+      isTruth: true
     }
   }
 }
@@ -26,11 +26,13 @@ export default {
   text-decoration: none;
 
 }
-.firstColor {
+.logo {
+  .colorLiknAndColorLinkHover(@secondColor, @hoverColor);
+}
+
+#About .logo,
+#Contact .logo {
   .colorLiknAndColorLinkHover(@mainColor, @hoverColor);
 }
 
-.secondColor {
-  .colorLiknAndColorLinkHover(@secondColor, @hoverColor);
-}
 </style>
