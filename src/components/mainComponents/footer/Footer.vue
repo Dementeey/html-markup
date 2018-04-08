@@ -16,9 +16,7 @@ export default {
   },
   name: 'footerComponent',
   data () {
-    return {
-      msg: ''
-    }
+    return {}
   }
 }
 </script>

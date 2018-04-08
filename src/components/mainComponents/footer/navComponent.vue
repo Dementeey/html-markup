@@ -26,7 +26,7 @@ export default {
         { message: 'About',
           title: 'About',
           url: '#About',
-          isActive: false
+          isActive: true
         },
         { message: 'Product',
           title: 'Product',
@@ -40,22 +40,6 @@ export default {
         }
       ]
     }
-  },
-  computed: {
-  //   getCoords: function () {
-  //     var box = this.getBoundingClientRect();
-
-  //     return {
-  //       top: box.top + pageYOffset,
-  //       left: box.left + pageXOffset
-  //     };
-  //   },
-
-  //   function () {
-  //     // `this` указывает на экземпляр
-  //     // return this.items[0].isActive = true
-  //     alert( "Браузер находится на " + window.screenX + "," + window.screenY );
-  //   }
   }
 }
 </script>
@@ -99,7 +83,9 @@ export default {
   pointer-events: none;
 }
 
-.activeScreen::before {
+#About .activeScreen::before,
+#Product .activeScreen::before,
+#Contact .activeScreen::before {
   content: '';
   position: absolute;
   top: 50%;
